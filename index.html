@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operations</title>
+</head>
+<body>
+    <h1>Perform Math Operations</h1>
+    <h4>By José Freitas</h4>
+
+    <h2>Perform Math Operations via URL</h2>
+    <p>To perform a math operation using a URL, use the following format:</p>
+    <p>https://ourpublicip_or_domainname/cgi-bin/math.cgi?OPERATION=OPERANDS*OPERATION</p>
+    <p>Replace <strong>OPERATION</strong> with the desired math operation (ADD, SUBTRACT, MULTIPLY, DIVIDE), and replace <strong>EXPRESSION</strong> with the expression to evaluate.</p>
+    <p>Example on how to perform an addition:</p>
+    <p>https://ourpublicip_or_domainname/cgi-bin/math.cgi?ADD=1+1</p>
+
+    <script>
+        function submitForm() {
+            var operation = document.getElementById("operation").value;
+            var expression = document.getElementById("operands").value;
+            var url = "/cgi-bin/math.cgi?" + operation + "=" + expression;
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
